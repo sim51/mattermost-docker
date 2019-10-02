@@ -47,6 +47,8 @@ services:
     build: web
     read_only: true
     restart: unless-stopped
+    ports:
+      - "9001:80"
     volumes:
       # This directory must have cert files if you want to enable SSL
       - /data/mattermost/web/cert:/cert:ro
